@@ -7,38 +7,40 @@
   
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
+    background-color: #f5f5f7;
     color: #1a1a1a;
     line-height: 1.6;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
   }
   
   /* === Hero Section === */
   .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(135deg, #e0f0ff 0%, #f5f5f7 100%);
+    padding: 6rem 1.5rem 4rem;
     text-align: center;
-    background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
-    padding: 2rem;
+    color: #1a1a1a;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeIn 1s ease both;
   }
   
   .hero h1 {
     font-size: 3rem;
-    font-weight: 700;
-    color: #000000;
     margin-bottom: 1rem;
-  }
-  
-  .hero h1 span {
-    color: #007aff; /* Apple-style blue */
+    font-family: 'Poppins', sans-serif;
   }
   
   .hero p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    color: #555;
-  }
+    font-size: 1.1rem;
+    color: #333;
+  }  
   
   /* === Buttons === */
   .nav-buttons {
@@ -49,73 +51,75 @@
   }
   
   .btn {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    background-color: #000;
+    background-color: #007aff;
     color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 8px;
     transition: all 0.3s ease;
+    font-weight: 600;
   }
   
   .btn:hover {
-    background-color: #007aff;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 122, 255, 0.2);
-  }
+    background-color: #005FCC;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 122, 255, 0.25);
+  }  
   
   .skills-list {
-    list-style: none;
-    padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 1rem;
-    max-width: 600px;
+    max-width: 800px;
     margin: 2rem auto;
+    padding: 0 1rem;
   }
   
   .skills-list li {
-    background: #f2f2f2;
-    padding: 0.75rem;
-    border-radius: 6px;
-    font-weight: 500;
-    color: #1a1a1a;
-    transition: background 0.3s;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
     text-align: center;
+    font-weight: 600;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .skills-list li:hover {
-    background: #007aff;
-    color: #fff;
-  }
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 122, 255, 0.2);
+  }  
   
   .project-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 2rem auto;
+    padding: 0 1rem;
   }
   
   .project-card {
-    background: #f2f2f2;
+    background: #fff;
     padding: 1.5rem;
     border-radius: 10px;
-    text-align: left;
-    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   }
   
   .project-card h3 {
+    font-family: 'Poppins', sans-serif;
     margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+    color: #1a1a1a;
   }
   
   .project-card p {
+    font-size: 0.95rem;
+    color: #444;
     margin-bottom: 1rem;
-    color: #333;
-  }
+  }  
   
   .project-card .btn {
     font-size: 0.9rem;
