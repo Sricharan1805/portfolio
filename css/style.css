@@ -1,149 +1,182 @@
 /* === Global Styles === */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f5f5f7;
-    color: #1a1a1a;
-    line-height: 1.6;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #000;
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f7;
+  color: #1a1a1a;
+  line-height: 1.75;
+  padding-bottom: 3rem;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* === Hero Section === */
+.hero {
+  background: linear-gradient(135deg, #e0f0ff 0%, #f5f5f7 100%);
+  padding: 6rem 1.5rem 4rem;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease both;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* === Buttons === */
+.nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #007aff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 122, 255, 0.15);
+}
+
+.btn:hover {
+  background-color: #005FCC;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 122, 255, 0.25);
+}
+
+/* === Skills Section === */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.skills-list li {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 122, 255, 0.2);
+}
+
+/* === Projects Section === */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.project-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0.5rem;
+  color: #1a1a1a;
+  font-size: 1.3rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.project-card .btn {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+/* === Contact Section === */
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.contact-info li {
+  margin-bottom: 1rem;
+}
+
+.contact-info a {
+  color: #007aff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* === Fade-in animation (used in hero) === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  /* === Hero Section === */
-  .hero {
-    background: linear-gradient(135deg, #e0f0ff 0%, #f5f5f7 100%);
-    padding: 6rem 1.5rem 4rem;
-    text-align: center;
-    color: #1a1a1a;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    animation: fadeIn 1s ease both;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .hero p {
-    font-size: 1.1rem;
-    color: #333;
-  }  
-  
-  /* === Buttons === */
-  .nav-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
-  
-  .btn {
-    background-color: #007aff;
-    color: #fff;
-    transition: all 0.3s ease;
-    font-weight: 600;
-  }
-  
-  .btn:hover {
-    background-color: #005FCC;
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 10px 20px rgba(0, 122, 255, 0.25);
-  }  
-  
-  .skills-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1rem;
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  
-  .skills-list li {
-    background: #fff;
-    border-radius: 8px;
-    padding: 1rem;
-    text-align: center;
-    font-weight: 600;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .skills-list li:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 122, 255, 0.2);
-  }  
-  
-  .project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-  
-  .project-card {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-card h3 {
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 0.5rem;
-    color: #1a1a1a;
-  }
-  
-  .project-card p {
-    font-size: 0.95rem;
-    color: #444;
-    margin-bottom: 1rem;
-  }  
-  
-  .project-card .btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
-  
-  .contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 2rem auto;
-    max-width: 600px;
-    font-size: 1.1rem;
-  }
-  
-  .contact-info li {
-    margin-bottom: 1rem;
-  }
-  
-  .contact-info a {
-    color: #007aff;
-    text-decoration: none;
-  }
-  
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-  
+}
